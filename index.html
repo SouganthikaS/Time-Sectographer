@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>AngularJS Homework</title>
+    <title>Time Sectographer</title>
     <script>
         document.write('<base href="' + document.location + '" />');
     </script>
@@ -16,12 +16,14 @@
     <header>
         <div test-directive=""></div>
     </header>
-    <div class="row">
+    <div class="row" ng-controller="TaskListController">
         <div class="col1">
             <div class="list-area">
                 <div ng-controller="TaskListAddController as taskAdder">
+                    <h2>{{taskAdder.value}}{{val}}</h2>
                     <input type="text" ng-model="taskAdder.taskName" placeholder="Name of the Task" /><br><br>
-                    <textarea placeholder="Description" ng-model="taskAdder.taskDescription" required></textarea><br><br>
+                    <textarea placeholder="Description" ng-model="taskAdder.taskDescription"
+                        required></textarea><br><br>
                     <input type="date" ng-model="taskAdder.taskTime"><br><br>
                     <select ng-model="taskAdder.taskCategory" required>
                         <option value="Personal">Personal</option>
@@ -35,35 +37,29 @@
         </div>
         <div class="col2">
             <div ng-controller="TaskListShowController as showList">
-                <h1>Find Tasks</h1>
+                <h1> {{ showList.value }} {{ val }} </h1>
                 <input type="text" ng-model="search" placeholder="Type the task you want to search..." /><br><br>
-                <span class="heading">Category: </span> 
-                <input type="radio" ng-model="catFilter" value="Work"/><span class="format">Work</span>
-                <input type="radio" ng-model="catFilter" value="Personal"/><span class="format">Personal</span>&ensp;
-                <input type="radio" ng-model="catFilter" value="Others"/><span class="format">Others</span>
+                <span class="heading">Category: </span>
+                <input type="radio" ng-model="catFilter" value="Work" /><span class="format">Work</span>
+                <input type="radio" ng-model="catFilter" value="Personal" /><span class="format">Personal</span>&ensp;
+                <input type="radio" ng-model="catFilter" value="Others" /><span class="format">Others</span>
                 <ol>
                     <li ng-repeat="task in showList.tasks | filter : {name : search, category : catFilter}">
                         <input type='checkbox' ng-model='task.selected'>
                         <label>{{task.name}}</label>
                         <span>{{task.category}} Task</span>
                         <span>{{task.time}}</span>
-                        <span>{{task.description}}</span><br/>
-                        <span><button ng-click="showList.removeTask($index);" class="rembut">Remove Task</button></span>
+                        <span>{{task.description}}</span><br />
+                        <span><button ng-click="showList.removeTask($index);" class="rembut">Remove
+                                Task</button></span>
                     </li>
                 </ol>
-
-                <!-- <button>Search Task</button>
-        <ol>
-            <li ng-repeat="task in showList.tasks | filter : {name : search}">
-                {{ task.description }} of {{ task.name }} 
-            </li>
-        </ol> -->
             </div>
         </div>
+        <footer>
+            {{ textval }}
+        </footer>
     </div>
-    <footer>
-        18IT008 Akash K  &ensp;&ensp;&ensp;&ensp;   18IT089 Souganthika S
-    </footer>
 </body>
 
 </html>
