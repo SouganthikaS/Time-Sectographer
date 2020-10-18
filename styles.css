@@ -33,6 +33,15 @@ header h1{
     text-align: left;
     padding-left: 20px;
 }
+.list-area h2{
+    margin: 0;
+    padding: 0;
+    color: rgb(161, 190, 183);
+    font-size: 35px;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    padding-bottom: 10px;
+}
 input[type='text'],
 textarea,
 input[type='date'],
