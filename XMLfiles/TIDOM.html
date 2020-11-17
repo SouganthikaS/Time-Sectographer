@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@900&family=Goldman&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        h1 {
+            font-size: 80px;
+            color: brown;
+            font-family: 'Big Shoulders Inline Text', cursive;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: 'Goldman', cursive;
+            color: coral;
+            font-size: 25px;
+            padding-left: 90px;
+            text-transform: capitalize;
+        }
+
+        p,ul {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            padding-left: 150px;
+            list-style: none;
+        }
+        *{
+            text-transform: capitalize;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1 id="rootNode"></h1><br><br><br>
+    <h2 id="firstChild"></h2>
+    <ul>
+        <li id = "list1"></li>
+    </ul>
+    <div class="container">
+        <h2 id="lastChild">2nd task</h2>
+        <ul>
+            <li id = "list2"></li>
+        </ul>
+    </div>
+
+    <script>
+        var parser, xmlDoc,i,x,y,a,b;
+        var txt="",stxt="";
+        var text = "<tasksInfo> <category> <name>Work</name> <count>2</count> </category> <category> <name>Personal</name> <count>1</count> </category> <category> <name>Other</name> <count>2</count> </category> <status> <type>Completed</type> <count>3</count> </status> <status> <type>Pending</type> <count>2</count> </status> </tasksInfo>";
+
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(text, "text/xml");
+        document.getElementById("rootNode").innerHTML =
+            xmlDoc.documentElement.nodeName;
+        document.getElementById("firstChild").innerHTML =
+            xmlDoc.getElementsByTagName("tasksInfo")[0].firstElementChild.nodeName;
+        document.getElementById("lastChild").innerHTML =
+            xmlDoc.getElementsByTagName("tasksInfo")[0].lastElementChild.nodeName;
+
+        x = xmlDoc.getElementsByTagName("name");
+        y = xmlDoc.getElementsByTagName("count");
+        for(i=0;i<x.length;i++){
+            txt += x[i].nodeName + " : " + x[i].childNodes[0].nodeValue + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + y[i].nodeName + " : " + y[i].childNodes[0].nodeValue+"<br>";
+        }
+
+        document.getElementById("list1").innerHTML = txt;
+
+        a = xmlDoc.getElementsByTagName("type");
+        b = xmlDoc.getElementsByTagName("count");
+        for(i=0;i<a.length;i++){
+            stxt += a[i].nodeName + " : " + a[i].childNodes[0].nodeValue + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + b[i+3].nodeName + " : " + b[i+3].childNodes[0].nodeValue+"<br>";
+        }
+
+        document.getElementById("list2").innerHTML = stxt;
+
+
+    </script>
+
+</body>
+
+</html>

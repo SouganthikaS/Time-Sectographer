@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Big+Shoulders+Inline+Text:wght@500&family=Goldman&display=swap');
+
+task{
+    padding-top: 60px;
+    padding-left: 10px;
+    position: relative;
+    display: block;
+}
+task name{
+    color: blueviolet;
+    position: relative;
+    display: block;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    font-size: 35px;
+}
+category name, status type, task description{
+    color:green;
+    position: relative;
+    display: block;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 25px;
+    padding-left: 20px;
+}
+task date,category count, status count{
+    color:brown;
+    position: relative;
+    font-size: 20px;
+    font-family: 'Goldman', cursive;
+    padding-left: 20px;
+}
+task category{
+    color: brown;
+    padding-left: 30px;
+    font-family: 'Goldman', cursive;
+    font-size: 20px;
+}
+task status{
+    color: rgb(219, 10, 10);
+    padding-left: 30px;
+    font-family: 'Goldman', cursive;
+    font-size: 20px;
+}

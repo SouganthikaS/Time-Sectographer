@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@900&family=Goldman&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        h1 {
+            font-size: 80px;
+            color: brown;
+            font-family: 'Big Shoulders Inline Text', cursive;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Goldman', cursive;
+            color: coral;
+            font-size: 45px;
+            padding-left: 90px;
+        }
+
+        ul {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            padding-left: 150px;
+        }
+
+        .container {
+            margin-left: 650px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Information about tasks</h1><br><br>
+    <h2>Categorical Classification</h2>
+    <ul id="categoryInfo"></ul><br><br>
+    <div class="container">
+        <h2>Status wise Classification</h2>
+        <ul id="statusInfo"></ul>
+    </div>
+    <script>
+        var text = '{ "category": [ { "name": "Work", "count": "2" }, { "name": "Personal", "count": "1" }, { "name": "Other", "count": "2" } ], "status": [ { "type": "Completed", "count": "3" }, { "type": "Pending", "count": "2" } ] }';
+
+        obj = JSON.parse(text);
+        document.getElementById("categoryInfo").innerHTML = "<li>" +
+            obj.category[0].name + " - " + obj.category[0].count + "</li> <li>" +
+            obj.category[1].name + " - " + obj.category[1].count + "</li> <li>" +
+            obj.category[2].name + " - " + obj.category[2].count + "</li>";
+        document.getElementById("statusInfo").innerHTML = "<li>" +
+            obj.status[0].type + " - " + obj.status[0].count + "</li> <li>" +
+            obj.status[1].type + " - " + obj.status[1].count + "</li>";
+    </script>
+</body>
+
+</html>

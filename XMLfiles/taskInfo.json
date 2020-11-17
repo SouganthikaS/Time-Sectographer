@@ -1,0 +1,26 @@
+{
+   "category": [
+      {
+         "name": "Work",
+         "count": "2"
+      },
+      {
+         "name": "Personal",
+         "count": "1"
+      },
+      {
+         "name": "Other",
+         "count": "2"
+      }
+   ],
+   "status": [
+      {
+         "type": "Completed",
+         "count": "3"
+      },
+      {
+         "type": "Pending",
+         "count": "2"
+      }
+   ]
+}

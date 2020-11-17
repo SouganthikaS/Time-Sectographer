@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+        }
+
+        .container {
+            padding-left: 50px;
+            display: flex;
+            height: 690px;
+            width: 1300px;
+        }
+
+        .container .innercont {
+            display: block;
+            width: 35%;
+        }
+
+        iframe {
+            width: 30%;
+            border: 4px dashed pink;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        input[type="button"] {
+            width: 200px;
+            height: 50px;
+            border: none;
+            display: block;
+            padding: 20px;
+            margin: 40px;
+            margin-left: 100px;
+            margin-top: 100px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        a{
+            text-decoration: none;
+        }
+        h1{
+            padding: 12px;
+            text-align: center;
+            font-family: 'Big Shoulders Stencil Display', cursive;
+            font-size: 65px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Time Sectographer</h1>
+    <div class="container">
+
+        <iframe src="TSXML.xml"></iframe>
+        <div class="innercont">
+            <a href="TLDOM.html"><input type="button" value="Task List DOM"></a>
+            <a href="TLJSON.html"><input type="button" value="Task List Parsed JSON"></a>
+            <a href="TIDOM.html"><input type="button" value="Task Info DOM"></a>
+            <a href="TIJSON.html"><input type="button" value="Task Info Parsed JSON"></a>
+        </div>
+
+        <iframe src="TSXML2.xml"></iframe>
+
+    </div>
+</body>
+
+</html>

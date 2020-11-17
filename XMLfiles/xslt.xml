@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "TIXSLT.xsl"?>
+<tasksInfo>
+    <category>
+        <name>Work</name>
+        <count>2</count>
+    </category>
+    <category>
+        <name>Personal</name>
+        <count>1</count>
+    </category>
+    <category>
+        <name>Other</name>
+        <count>2</count>
+    </category>
+    <status>
+        <type>Completed</type>
+        <count>3</count>
+    </status>
+    <status>
+        <type>Pending</type>
+        <count>2</count>
+    </status>
+</tasksInfo>

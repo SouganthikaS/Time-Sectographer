@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@900&family=Goldman&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        h1 {
+            font-size: 80px;
+            color: brown;
+            font-family: 'Big Shoulders Inline Text', cursive;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Goldman', cursive;
+            color: coral;
+            font-size: 25px;
+            padding-left: 90px;
+        }
+
+        p,ul {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            padding-left: 150px;
+            list-style: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>List of tasks</h1><br><br><br>
+    <div class="deatails">
+        <h2>Number of Tasks: </h2> <p id = "count"></p>
+    </div>
+    <h2>1st task</h2>
+    <ul>
+        <li id = "task1"></li>
+        <li id = "status1"></li>
+    </ul>
+    <div class="container">
+        <h2>2nd task</h2>
+        <ul>
+            <li id = "task2"></li>
+            <li id = "status2"></li>
+        </ul>
+    </div>
+
+    <script>
+        var parser, xmlDoc;
+        var text = "<taskList><task id = '1'> <name>XML Doc creation</name> <description>Create two XML Documents for the assignment</description> <date>13-11-2020</date> <category>Work</category> <status>Completed</status> </task><task id = '2'> <name>DTD and Schema for XML</name> <description>Create DTD and Schema documents for the created XML</description> <date>13-11-2020</date> <category>Work</category> <status>Pending</status> </task></taskList>";
+
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(text, "text/xml");
+        
+        document.getElementById("count").innerHTML =
+            xmlDoc.getElementsByTagName("taskList")[0].childElementCount;
+        
+        document.getElementById("status1").innerHTML =
+            xmlDoc.getElementsByTagName("status")[0].childNodes[0].nodeValue;
+        document.getElementById("task1").innerHTML =
+            xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+
+            document.getElementById("status2").innerHTML =
+            xmlDoc.getElementsByTagName("status")[1].childNodes[0].nodeValue;
+        document.getElementById("task2").innerHTML =
+            xmlDoc.getElementsByTagName("name")[1].childNodes[0].nodeValue;
+    </script>
+
+</body>
+
+</html>

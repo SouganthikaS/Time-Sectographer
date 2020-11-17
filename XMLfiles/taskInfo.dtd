@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT taskInfo (category+,status+)>
+<!ELEMENT category (name,count)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT count (#PCDATA)>
+<!ELEMENT status (Completed|Pending)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT count (#PCDATA)>

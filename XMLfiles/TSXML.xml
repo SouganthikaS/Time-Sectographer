@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone = "no" ?>
+<!DOCTYPE taskList SYSTEM "taskList.dtd">
+<?xml-stylesheet type="text/css" href="xmlcss.css"?> 
+<taskList xmlns="https://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceschemaLocation="E:\TimeSectographer\taskList.xsd">
+    <task id = "1">
+        <name>XML Doc creation</name>
+        <description>Create two XML Documents for the assignment</description>
+        <date>13-11-2020</date>
+        <category>Work</category>
+        <status>Completed</status>
+    </task>
+    <task id = "2">
+        <name>DTD and Schema for XML</name>
+        <description>Create DTD and Schema documents for the created XML</description>
+        <date>13-11-2020</date>
+        <category>Work</category>
+        <status>Pending</status>
+    </task>
+</taskList>

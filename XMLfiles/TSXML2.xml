@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone = "no" ?>
+<!DOCTYPE taskInfo SYSTEM "taskInfo.dtd">
+<?xml-stylesheet type="text/css" href="xmlcss.css"?> 
+<tasksInfo  xmlns="https://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceschemaLocation="E:\TimeSectographer\taskInfo.xsd">
+    <category>
+        <name>Work</name>
+        <count>2</count>
+    </category>
+    <category>
+        <name>Personal</name>
+        <count>1</count>
+    </category>
+    <category>
+        <name>Other</name>
+        <count>2</count>
+    </category>
+    <status>
+        <type>Completed</type>
+        <count>3</count>
+    </status>
+    <status>
+        <type>Pending</type>
+        <count>2</count>
+    </status>
+</tasksInfo>

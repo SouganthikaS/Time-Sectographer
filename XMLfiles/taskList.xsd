@@ -1,0 +1,20 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="taskList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="task" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="name"/>
+              <xs:element type="xs:string" name="description"/>
+              <xs:element type="xs:string" name="date"/>
+              <xs:element type="xs:string" name="category"/>
+              <xs:element type="xs:string" name="status"/>
+            </xs:sequence>
+            <xs:attribute type="xs:number" name="id" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

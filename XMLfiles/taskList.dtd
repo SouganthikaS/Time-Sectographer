@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT taskList (task+)>
+<!ELEMENT task (name,description,date,category,status)>
+<!ELEMENT name (#PCDATA) #REQUIRED>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT status (Completed|Pending) "Pending">
+<!ATTLIST task id #REQUIRED>

@@ -1,0 +1,20 @@
+{
+    "task": [
+      {
+         "@id": "1",
+         "name": "XML Doc creation",
+         "description": "Create two XML Documents for the assignment",
+         "date": "13-11-2020",
+         "category": "Work",
+         "status": "Completed"
+      },
+      {
+         "@id": "2",
+         "name": "DTD and Schema for XML",
+         "description": "Create DTD and Schema documents for the created XML",
+         "date": "13-11-2020",
+         "category": "Work",
+         "status": "Pending"
+      }
+   ]
+}
