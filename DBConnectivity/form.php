@@ -8,7 +8,7 @@
 
 <body>
 <form method="POST" action="search.php">
-<a href="tr.php"><h1> List of tasks </h1></a>
+<a href="form.php"><h1> List of tasks </h1></a>
                     <input type="text" id="sname" name="sname" placeholder="Type the task you want to search..." /><br><br>
                     <span class="heading">Category: </span>
                     <select id="cat" name = "cat" required>
